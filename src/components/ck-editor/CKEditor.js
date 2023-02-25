@@ -1,11 +1,11 @@
-import ClassicEditor from './ClassicEditor';
+import ImgEditor from './ImgEditor';
 
 const CKEditor = () => {
 	return (
 		<>
-			<ClassicEditor />
+			{/* <ClassicEditor /> */}
 			{/* <BaseEditor /> */}
-			{/* <LinkEditor /> */}
+			<ImgEditor />
 		</>
 	);
 };
