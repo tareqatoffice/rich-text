@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+/json-server/node_modules
+/libs/ck-link/node_modules
+/libs/ck-base/node_modules
 /.pnp
 .pnp.js
 
