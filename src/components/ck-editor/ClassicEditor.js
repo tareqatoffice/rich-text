@@ -3,11 +3,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import React from 'react';
 
 const ClassicEditor = () => {
-	const customConfig = {
-		ckfinder: {
-			uploadUrl: 'https://tareqnmd.com/',
-		},
-	};
+	const customConfig = {};
 
 	const getEditorData = (data, event) => {
 		// console.log(data, event);
