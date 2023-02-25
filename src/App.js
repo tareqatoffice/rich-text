@@ -1,8 +1,12 @@
 import './App.css';
-import ClassicEditor from './components/ClassicEditor';
+import CKEditor from './components/ck-editor/CKEditor';
 
 function App() {
-	return <ClassicEditor />;
+	return (
+		<>
+			<CKEditor />
+		</>
+	);
 }
 
 export default App;
