@@ -1,14 +1,13 @@
-import Editor from 'ck-base/build/ckeditor';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
+import Editor from 'ck-link/build/ckeditor';
 import React from 'react';
 
-const BaseEditor = () => {
+const LinkEditor = () => {
 	const customConfig = {
 		fontSize: {
-			options: [8, 10, 12, 14, 'default', 18, 20, 24, 32, 36, 40],
-			supportAllValues: true,
+			
 		},
-		removePlugins: ['MediaEmbed', 'Style'],
+		removePlugins: ['Style'],
 	};
 
 	const getEditorData = (data, event) => {
@@ -17,7 +16,7 @@ const BaseEditor = () => {
 
 	return (
 		<div className="App">
-			<h2>Base64 CKEditor</h2>
+			<h2>Link CKEditor</h2>
 			<CKEditor
 				editor={Editor}
 				config={customConfig}
@@ -27,4 +26,4 @@ const BaseEditor = () => {
 	);
 };
 
-export default BaseEditor;
+export default LinkEditor;

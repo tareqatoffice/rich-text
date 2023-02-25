@@ -11,6 +11,7 @@ import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
 import CKFinderUploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter.js';
+import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices.js';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock.js';
 import DataFilter from '@ckeditor/ckeditor5-html-support/src/datafilter.js';
@@ -49,6 +50,7 @@ import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak.js';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice.js';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js';
+import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting.js';
 import StandardEditingMode from '@ckeditor/ckeditor5-restricted-editing/src/standardeditingmode.js';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough.js';
 import Style from '@ckeditor/ckeditor5-style/src/style.js';
@@ -66,7 +68,6 @@ import Title from '@ckeditor/ckeditor5-heading/src/title.js';
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
-import EditorWatchdog from '@ckeditor/ckeditor5-watchdog/src/editorwatchdog.js';
 
 class Editor extends ClassicEditor {}
 
@@ -80,6 +81,7 @@ Editor.builtinPlugins = [
 	BlockQuote,
 	Bold,
 	CKFinderUploadAdapter,
+	CloudServices,
 	Code,
 	CodeBlock,
 	DataFilter,
@@ -118,6 +120,7 @@ Editor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	RemoveFormat,
+	SourceEditing,
 	StandardEditingMode,
 	Strikethrough,
 	Style,
@@ -152,33 +155,36 @@ Editor.defaultConfig = {
 			'outdent',
 			'indent',
 			'|',
+			'imageUpload',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
 			'undo',
 			'redo',
-			'htmlEmbed',
-			'imageUpload',
-			'imageInsert',
-			'highlight',
+			'alignment',
+			'code',
+			'codeBlock',
+			'findAndReplace',
+			'fontBackgroundColor',
+			'fontColor',
 			'fontSize',
 			'fontFamily',
-			'fontColor',
-			'fontBackgroundColor',
-			'findAndReplace',
-			'codeBlock',
-			'code',
-			'alignment',
-			'textPartLanguage',
-			'underline',
-			'todoList',
+			'highlight',
+			'horizontalLine',
+			'htmlEmbed',
+			'imageInsert',
 			'pageBreak',
 			'removeFormat',
+			'sourceEditing',
 			'restrictedEditingException',
 			'strikethrough',
 			'style',
 			'subscript',
-			'superscript'
+			'|',
+			'superscript',
+			'textPartLanguage',
+			'todoList',
+			'underline'
 		]
 	},
 	language: 'en',
@@ -203,4 +209,4 @@ Editor.defaultConfig = {
 	}
 };
 
-export default { Editor, EditorWatchdog };
+export default Editor;
